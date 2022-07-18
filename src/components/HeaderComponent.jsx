@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   Navbar,
   NavbarBrand,
@@ -93,6 +93,9 @@ function Header() {
                 We take inspiration from the World's be fusion experience. Our
                 lipsmacking creation will tickle your culinary senses!
               </p>
+              <Link className="fetch" to="/test-fetch">
+                TEST FETCH
+              </Link>
             </div>
           </div>
         </div>

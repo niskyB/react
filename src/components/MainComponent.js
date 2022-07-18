@@ -8,6 +8,7 @@ import Menu from './MenuComponent';
 import DishDetail from './DishDetailComponent';
 import About from './AboutComponent';
 import { useSelector } from 'react-redux';
+import TestFetchComponent from '../useFetch/TestFetchComponent';
 
 function Main() {
     const dishes = useSelector(state => state.dishes);
@@ -50,6 +51,7 @@ function Main() {
             <Route exact path='/menu' component={() => <Menu dishes={dishes} />} />
             <Route path='/menu/:dishId' component={DishWithId} />
             <Route path='/about' component={() => <About leaders={leaders} />} />
+            <Route path='/test-fetch' component={() => <TestFetchComponent />} />
             <Redirect to='/home' />
         </Switch>
         <Footer />

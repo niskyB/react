@@ -14,8 +14,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <div className="App">
-          {/* <Main /> */}
-          <TestFetchComponent />
+          <Main />
         </div>
       </BrowserRouter>
     </Provider>
