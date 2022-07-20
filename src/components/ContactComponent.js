@@ -40,7 +40,6 @@ function Contact(props) {
         const res = { ...information };
         res[name] = value;
         setInformation(res);
-
     }
 
     const handleSubmit = (event) => {
@@ -63,13 +62,17 @@ function Contact(props) {
 
         if (information.touched.firstname && firstname.length < 3) res.firstname = 'First Name should be >= 3 characters';
         else if (information.touched.firstname && firstname > 10) res.firstname = 'First Name should be <= 10 characters';
+        else res.firstname = '';
 
         if (information.touched.lastname && lastname.length < 3) res.lastname = 'Last Name should be >= 3 characters';
         else if (information.touched.lastname && lastname > 10) res.lastname = 'Last Name should be <= 10 characters';
+        else res.lastname = ''
 
         const reg = /^\d+$/;
         if (information.touched.telnum && !reg.test(telnum)) res.telnum = 'Tel. Number should contain only numbers';
+        else res.telnum = '';
         if (information.touched.email && email.split('').filter(x => x === '@').length !== 1) res.email = 'Email should contain a @';
+        else res.email = '';
         return res;
     }
 
