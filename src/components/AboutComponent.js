@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardImg, CardText, CardTitle, Media } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Media } from 'reactstrap';
 
 function About(props) {
     const renderContent = (leaders) => (

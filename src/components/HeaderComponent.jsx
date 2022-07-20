@@ -21,11 +21,6 @@ import {
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [info, setInfo] = useState({
-    username: "",
-    password: "",
-    remember: "",
-  });
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState("");
